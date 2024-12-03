@@ -21,6 +21,6 @@ model Payment {
   pixCode        String   @map("pix_code") @db.Text
   expirationDate DateTime @map("expiration_date")
   orderId        String   @map("order_id")
-  createdAt      DateTime @default(now())
-  updatedAt      DateTime @updatedAt
+  createdAt      DateTime @map("created_at") @default(now())
+  updatedAt      DateTime @map("updated_at") @updatedAt
 }
